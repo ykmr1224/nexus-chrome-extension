@@ -1,0 +1,20 @@
+{
+  "name": "nexus-chrome-extension",
+  "description": "Chrome extension to Automate Nexus interview schedule",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/ykmr1224/nexus-chrome-extension",
+  "homepage": "https://github.com/ykmr1224/nexus-chrome-extension",
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "src/",
+    "manifest.json",
+    "notify.mp3"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "build": "mkdir -p build/pkg && cp -r src manifest.json notify.mp3 build/pkg",
+    "package": "(cd build/pkg && zip -r ../${npm_package_name}_${npm_package_version}.zip *)"
+  }
+}

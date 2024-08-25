@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "NexusInterviewSchedule",
+  "version": "0.1.0",
+  "description": "tbd",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ttp.cbp.dhs.gov/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["notify.mp3"],
+      "matches": ["https://ttp.cbp.dhs.gov/*"]
+    }
+  ]
+}
